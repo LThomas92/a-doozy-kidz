@@ -56,7 +56,7 @@
       display: block;
       position: absolute;
       top: 0;
-      left: 0;
+      right: 0;
       margin-top: 7.5rem;
       margin-left: 10rem; }
     .c-homepage__header::after {
@@ -135,7 +135,7 @@
     color: #fff;
     margin-bottom: 1.5rem; }
   .c-homepage__header-desc {
-    color: #D0D0D0; }
+    color: #F5F5F5; }
   .c-homepage__header-cta {
     background-color: #fff;
     color: #21BAED;
@@ -188,7 +188,7 @@
     letter-spacing: 1.2px; }
   .c-homepage__about-desc {
     margin-bottom: 1rem;
-    color: #D0D0D0; }
+    color: #F5F5F5; }
   .c-homepage__about-cta {
     border: 1.2px solid #E989B8;
     color: #E989B8;
@@ -196,12 +196,14 @@
     display: inline-block;
     margin-top: 0.5rem; }
   .c-homepage__about-content {
-    flex-basis: calc((100% / 2) - 2rem); }
+    flex-basis: calc((100% / 3) - 1rem); }
   .c-homepage__about-images-section {
-    flex-basis: calc((100% / 2) - 2rem); }
+    flex-basis: calc((100% / 2) - 1rem);
+    position: relative; }
   .c-homepage__about-big-image {
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.15), 25px 0px 20px -20px rgba(0, 0, 0, 0.15), 0px 25px 20px -20px rgba(0, 0, 0, 0.15), -25px 0px 20px -20px rgba(0, 0, 0, 0.15); }
     .c-homepage__about-big-image::before {
       content: "";
       position: relative;
@@ -216,25 +218,16 @@
       display: block;
       position: absolute;
       left: 0;
-      top: 0; }
+      top: 0;
+      border: 6px dotted #FDD76B; }
   .c-homepage__about-small-image {
-    position: relative;
-    overflow: hidden; }
-    .c-homepage__about-small-image::before {
-      content: "";
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 0;
-      padding-bottom: 66.5%; }
+    position: absolute; }
     .c-homepage__about-small-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      position: absolute;
+      width: 75%;
+      top: 0;
       left: 0;
-      top: 0; }
+      object-fit: cover;
+      display: block; }
   .c-homepage__classes-section {
     text-align: center;
     padding-top: 7rem;

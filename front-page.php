@@ -30,7 +30,6 @@
                 $features = get_field('about_features');
                 $cta = get_field('about_cta');
                 $bigImage = get_field('big_image');
-                $medImage = get_field('medium_image');
                 $smallImage = get_field('small_image');
             ?>
 
