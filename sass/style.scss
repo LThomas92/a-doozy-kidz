@@ -1,0 +1,49 @@
+@import "globals/colors";
+@import "globals/variables";
+@import "globals/mixins";
+
+@import "header";
+
+//Pages
+@import "pages/front-page";
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $sniglet;
+}
+
+p, a, li {
+    font-family: $lato;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    flex: 1;
+  }

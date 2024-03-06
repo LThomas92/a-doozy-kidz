@@ -1,0 +1,21 @@
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+    @include container-margins;
+    &__logo {
+        height: 6rem;
+    }
+}
+
+.main-navigation {
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    li {
+        margin-right: 1.2rem;
+    }
+}
