@@ -1,39 +1,12 @@
 .c-homepage {
-    @include container-margins;
     &__header {
-        background-color: $purple;
-        width: 100vw;
-        position: relative;
-        left: calc((50% - 50vw));
-        &::before {
-            content: '';
-            background-image: url('../img/icons/building-blocks.svg');
-            background-size: 90px 90px;
-            background-repeat: no-repeat;
-            width: 90px;
-            height: 90px;
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin-top: 7.5rem;
-            margin-left: 10rem;
-        }
-        &::after {
-            content: '';
-            background-image: url('../img/icons/star.svg');
-            background-size: 70px 70px;
-            background-repeat: no-repeat;
-            width: 70px;
-            height: 70px;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin-top: 2.5rem;
-            margin-left: 8rem;
-        }
+      background-image: url('../img/wave.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100vw;
+      height: 180vh; /* Set a default height for the header */    
     }
+
     &__header-content {
         @include container-margins;
         padding-top: 5rem;

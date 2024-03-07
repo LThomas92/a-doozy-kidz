@@ -4,6 +4,7 @@
 
     <div class="c-homepage">
         <div class="c-homepage__header">
+          
 
             <?php 
                 $title = get_field('title');
@@ -21,7 +22,8 @@
                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
             </figure>
             </div>
-        </div>
+
+            </div>
 
         <div class="c-homepage__about-section">
             <?php 
