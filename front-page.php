@@ -3,10 +3,9 @@
 <div class="content">
 
     <div class="c-homepage">
-        <div class="c-homepage__header">
-          
-
-            <?php 
+	<div class="c-homepage__header">
+            <?php
+                $smallTitle = get_field('small_title'); 
                 $title = get_field('title');
                 $desc = get_field('description');
                 $button = get_field('button');
@@ -14,6 +13,7 @@
             ?>
             <div class="c-homepage__header-content">
                 <div class="c-homepage__header-main-content">
+                <h5 class="c-homepage__header-small-title"><?php echo $smallTitle; ?></h5>
                 <h1 class="c-homepage__header-title"><?php echo $title; ?></h1>
                 <p class="c-homepage__header-desc"><?php echo $desc; ?></p>
                 <a class="c-homepage__header-cta" href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
@@ -22,37 +22,39 @@
                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
             </figure>
             </div>
-
+            <div class="c-homepage__wave-shape">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/wave.svg" alt="">
             </div>
-
-        <div class="c-homepage__about-section">
+</div>
+        <div class="c-homepage__about-section gutenberg-styles">
             <?php 
+                $smallAboutTitle = get_field('about_small_title');
                 $title = get_field('about_title');
                 $desc = get_field('about_description');
                 $features = get_field('about_features');
                 $cta = get_field('about_cta');
-                $bigImage = get_field('big_image');
-                $smallImage = get_field('small_image');
+                $image = get_field('about_image');
             ?>
 
-
-            <div class="c-homepage__about-images-section">
-                <figure class="c-homepage__about-big-image">
-                    <img src="<?php echo $bigImage['url']; ?>" alt="<?php echo $bigImage['alt']; ?>">
-                </figure>
-
-                <figure class="c-homepage__about-small-image">
-                    <img src="<?php echo $smallImage['url']; ?>" alt="<?php echo $smallImage['alt']; ?>">
-                </figure>
-            </div>
-
-
             <div class="c-homepage__about-content">
+                <h5 class="c-homepage__about-small-title"><?php echo $smallAboutTitle; ?></h5>
                 <h2 class="c-homepage__about-title"><?php echo $title; ?></h2>
                 <p class="c-homepage__about-desc"><?php echo $desc; ?></p>
-                <?php if( have_rows('features') ): ?>
+
+                <div class="c-homepage__about-image-features">
+
+                <figure class="c-homepage__about-image">
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+            </figure>
+
+
+                <div class="c-homepage__about-features-section">
+
+                <h3 class="c-homepage__about-features-title">What we offer</h3>
+            
+                <?php if( have_rows('about_features') ): ?>
                 <ul class="c-homepage__about-features">
-                <?php while( have_rows('features') ) : the_row();
+                <?php while( have_rows('about_features') ) : the_row();
                 $feature = get_sub_field('feature'); ?>
                 <li class="c-homepage__about-feature">
                     <?php echo $feature; ?>
@@ -61,19 +63,17 @@
                     <?php endwhile; ?>
     </ul>
 
-<?php 
-else :
-endif; 
-?>
+    <?php  else : endif; ?>
 
-            <a class="c-homepage__about-cta" href="<?php echo $cta['url']; ?>"><?php echo $cta['title']; ?></a>
-            </div>
+    <a class="c-homepage__about-cta" href="<?php echo $cta['url']; ?>"><?php echo $cta['title']; ?></a>
 
+    </div>
+    </div>
 
         </div>
 
 
-        <div class="c-homepage__classes-section">
+        <div class="c-homepage__classes-section gutenberg-styles">
                 <?php $classesTitle = get_field('classes_title'); 
                 ?>
                 <h2 class="c-homepage__classes-title"><?php echo $classesTitle; ?></h2>

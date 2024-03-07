@@ -1,10 +1,37 @@
 .c-homepage {
     &__header {
-      background-image: url('../img/wave.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100vw;
-      height: 180vh; /* Set a default height for the header */    
+       width: 100%;
+        background-color: $purple;
+        position: relative;
+        margin-bottom: 10rem;
+        padding-top: 2rem;
+        z-index: 10;
+
+        &::before {
+            content: '';
+            background-image: url('../img/icons/arts.svg');
+            background-size: 50px 50px;
+            width: 50px;
+            height: 50px;
+            display: block;
+            position: absolute;
+            top: 50px;
+            left: -80px;
+            z-index: 1;
+        }
+    }
+
+    &__wave-shape {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -236px;
+        z-index: 0;
+        display: block;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__header-content {
@@ -14,54 +41,19 @@
         justify-content: space-between;
         align-items: center;
         z-index: 2;
-        &::before {
-            content: '';
-            background-image: url('../img/icons/science.svg');
-            background-size: 70px 70px;
-            background-repeat: no-repeat;
-            width: 70px;
-            height: 70px;
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin-right: 5rem;
-        }
-        &::after {
-            content: '';
-            background-image: url('../img/icons/arts.svg');
-            background-size: 70px 70px;
-            background-repeat: no-repeat;
-            width: 70px;
-            height: 70px;
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin-bottom: 5rem;
-            margin-left: 5rem;
-        }
+        position: relative;
+       
     }
     &__header-main-content {
         flex-basis: calc((100% / 2) - 2rem);
         position: relative;
-        &::before {
-            content: '';
-            background-image: url('../img/icons/music.svg');
-            background-size: 70px 70px;
-            background-repeat: no-repeat;
-            width: 70px;
-            height: 70px;
-            display: block;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            margin-bottom: 5rem;
-            margin-left: 2.5rem;
-        }
-        &::after {
-            
-        }
+    }
+    &__header-small-title {
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $blue;
+        letter-spacing: 1.4px;
     }
     &__header-title {
         font-weight: 300;
@@ -76,135 +68,134 @@
         background-color: $white;
         color: $blue;
         display: inline-block;
-        margin-top: 1.5rem;
+        margin-top: 3rem;
         padding: 1.2rem 1.5rem;
         border-radius: 25px;
     }
     &__header-image {
-        position: relative;
-        overflow: hidden;
         flex-basis: calc((100% / 2) - 2rem);
         z-index: 10;
-        &::before {
-            content: "";
-            position: relative;
-            display: block;
-            width: 100%;
-            height: 0;
-            padding-bottom: 66.5%;
-        }
+        position: relative; // Ensure the parent container is positioned
+        top: 3rem;
         img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
             display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        &::after {
-            content: '';
-            background-image: url('../img/icons/music.svg');
-            background-size: 70px 70px;
-            background-repeat: no-repeat;
-            width: 70px;
-            height: 70px;
-            display: block;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            margin-bottom: 160rem;
-            margin-right: 8rem;
-            z-index: -1;
+            position: relative; // Position the image absolutely within the container
+            z-index: 1;
         }
     }
 
     //ABOUT SECTION
 
     &__about-section {
-        display: flex;
-        justify-content: space-between;
-        padding: 8rem 0;
-    }
-
-    &__about-title {
-        color: $blue;
-        font-weight: 300;
-        margin-bottom: 1.2rem;
-        letter-spacing: 1.2px;
-    }
-
-    &__about-desc {
-        margin-bottom: 1rem;
-        color: $grey;
-    }
-
-    &__about-cta {
-        border: 1.2px solid $pink;
-        color: $pink;
-        padding: 1rem 1.8rem;
-        display: inline-block;
-        margin-top: 0.5rem;
+        @include container-margins;
     }
 
     &__about-content {
-        flex-basis: calc((100% / 3) - 1rem);
+        padding-bottom: 8rem;
     }
 
-    &__about-images-section {
-        flex-basis: calc((100% / 2) - 1rem);
-        position: relative;
+    &__about-small-title {
+        width: 20%;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+        background-color: $green;
+        color: $white;
+        border-radius: 10px;
+        padding: 0.4rem 0.2rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
     }
 
+    &__about-title {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        font-weight: 500;
+        color: $navyBlue;
+    }
 
+    &__about-desc {
+        text-align: center;
+        margin-bottom: 3.5rem;
+        color: $lightPurple;
+        padding: 0 4rem;
+        letter-spacing: 1.2px;
+    }
 
-    &__about-big-image {
+    &__about-image-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 6rem;
+    }
+
+    &__about-image {
         position: relative;
         overflow: hidden;
-        box-shadow: $box-shadow-light-black--2;
+        border: 5px dotted $yellow;
         &::before {
             content: "";
             position: relative;
             display: block;
             width: 100%;
             height: 0;
-            padding-bottom: 66.5%;
+            padding-bottom: 65%;
         }
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            display: block;
             position: absolute;
             left: 0;
             top: 0;
-            border: 6px dotted $yellow;
-        }
-    }
-
-    &__about-small-image {
-        position: absolute;
-        img {
-            width: 75%;
-            top: 0;
-            left: 0;
             object-fit: cover;
-            display: block;
+            transition: .3s cubic-bezier(.64,.04,.35,1);
+            &:hover {
+                transform: scale(1.05);
+              }
+        }
+    }
+    
+    &__about-features-title {
+        margin-bottom: 1.2rem;
+        font-weight: 400;
+        color: $blue;
+    }
+
+    &__about-features {
+        margin-bottom: 5rem;
+    }
+
+    &__about-feature {
+        margin-bottom: 1.2rem;
+        &::before {
+            content: '';
+            background-image: url('../img/icons/gold-star.svg');
+            background-size: 15px 15px;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 1rem;
         }
     }
 
+    &__about-cta {
+        background-color: $navyBlue;
+        color: $white;
+        padding: 1.2rem 1.5rem;
+        border-radius: 25px;
+    }
 
-
-
-
-
-
-
+   
 
     &__classes-section {
         text-align: center;
-        padding-top: 7rem;
-        background-color: $lightBlue;
+        padding-top: 5rem;
+        background-color: rgba($lightBlue, 0.5);
         width: 100vw;
         position: relative;
         left: calc((50% - 50vw));
@@ -224,11 +215,17 @@
         flex-basis: calc((100% / 3) - 2rem);
         margin-top: 1.5rem;
     }
+    &__class-content {
+        background-color: $white;
+        padding: 0 2.5rem;
+    }
     &__class-title {
         font-weight: 300;
-        margin-top: 0.5rem;
         margin-bottom: 1rem;
         color: $blue;
+    }
+    &__class-desc {
+        margin-bottom: 1.2rem;
     }
     &__class-img {
         position: relative;
@@ -253,3 +250,4 @@
         }
     }
 }
+
