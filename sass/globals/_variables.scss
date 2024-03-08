@@ -46,3 +46,8 @@ $lato: "Lato", sans-serif;
   25px 0px 20px -20px $white,
   0px 25px 20px -20px $white,
   -25px 0px 20px -20px $white;
+
+  $box-shadow-light-blue: 0px -25px 20px -20px rgba($blue,0.2),
+  25px 0px 20px -20px rgba($blue,0.2),
+  0px 25px 20px -20px rgba($blue,0.2),
+  -25px 0px 20px -20px rgba($blue,0.2),;

@@ -74,9 +74,16 @@
 
 
         <div class="c-homepage__classes-section gutenberg-styles">
-                <?php $classesTitle = get_field('classes_title'); 
+                <?php $classesTitle = get_field('classes_title');
+                      $classesDesc = get_field('classes_description'); 
+                      $classesCTA = get_field('classes_cta');
                 ?>
                 <h2 class="c-homepage__classes-title"><?php echo $classesTitle; ?></h2>
+
+                <div class="c-homepage__classes-desc">
+                    <p><?php echo $classesDesc; ?></p>
+                </div>
+
                 <?php if( have_rows('classes') ): ?>
                     <ul class="c-homepage__classes">
                 <?php while( have_rows('classes') ) : the_row();
@@ -85,9 +92,6 @@
                   $title = get_sub_field('class_title');
                   $price = get_sub_field('class_price');
                   $desc = get_sub_field('class_description');
-                  $age = get_sub_field('class_age');
-                  $size = get_sub_field('class_size');
-                  $teacherSize = get_sub_field('educator_size');
                  ?>
         <li class="c-homepage__class">
         <div class="c-homepage__class-img">
@@ -96,14 +100,7 @@
         <div class="c-homepage__class-content">
             <h4 class="c-homepage__class-title"><?php echo $title; ?></h4>
             <p class="c-homepage__class-desc"><?php echo $desc; ?></p>
-            <ul class="c-homepage__class-meta-info">
-                <li class="c-homepage__class-age">
-                    <span>For Ages</span>
-                    <?php echo $age; ?>
-                </li>
-                <li></li>
-                <li></li>
-            </ul>
+            <p class="c-homepage__class-price"><?php echo $price; ?></p>
         </div>
 
     </li>
@@ -112,7 +109,52 @@
          endif;
    ?>
     </ul>
+
+    <a class="c-homepage__classes-cta" href="<?php echo $classesCTA['url']; ?>"><?php echo $classesCTA['title']; ?></a>
             </div>
+
+
+        <div class="c-homepage__testimonials">
+            <?php 
+                $testimonialsTitle = get_field('testimonials_title');
+                $testimonialsCTA = get_field('testimonials_cta');
+            ?>
+            <div class="c-homepage__testimonials-content">
+                <h2 class="c-homepage__testimonials-title"><?php echo $testimonialsTitle; ?></h2>
+                <div class="c-homepage__testimonial-cta-container">
+                <a href="<?php echo $testimonialsCTA['url']; ?>" class="c-homepage__testimonials-cta"><?php echo $testimonialsCTA['title']; ?></a>
+                </div>
+
+                <?php $testimonials = get_field('testimonials'); 
+                if ( $testimonials ): ?>
+            <ul class="c-homepage__testimonials-list">
+             <?php foreach( $testimonials as $testimonial ): 
+                    $link = get_permalink( $testimonial->ID );
+                    $title = get_the_title( $testimonial->ID );
+                    $content = apply_filters( 'the_content', $testimonial->post_content );
+                    $testimonialRelation = get_field('testimonial_relation' , $testimonial->ID);
+                ?>
+        <li class="c-homepage__testimonial">
+            <div class="c-homepage__testimonial-reviews-title">
+                <h4 class="c-homepage__testimonial-title"><?php echo $title; ?></h4>
+                <p class="c-homepage__testimonial-relation"><?php echo $testimonialRelation; ?></p>
+                <ul class="c-homepage__testimonials-stars">
+                    <li></li>
+                </ul>
+            </div>
+           <div class="c-homepage__testimonial-content"><?php echo $content; ?></div>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+    <?php 
+    // Reset the global post object so that the rest of the page works correctly.
+    wp_reset_postdata(); ?>
+<?php endif; ?>
+
+            </div>
+
+            
+        </div>
 
 
 

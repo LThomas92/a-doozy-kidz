@@ -47,4 +47,11 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
+			
+	   <div class="site-header__search-cart">
+			<img class="site-header__search" src="<?php echo get_template_directory_uri(); ?>/img/icons/search.svg" alt="Search Icon">
+			<img class="site-header__cart" src="<?php echo get_template_directory_uri(); ?>/img/icons/cart.svg" alt="Cart Icon">
+	   </div>
+
 	</header><!-- #masthead -->
