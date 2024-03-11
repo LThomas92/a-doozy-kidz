@@ -2,36 +2,14 @@
     &__header {
        width: 100%;
         background-color: $offWhite;
+        background-image: url('../img/header-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
         position: relative;
         margin-bottom: 10rem;
         padding-top: 2rem;
         z-index: 10;
 
-        &::before {
-            content: '';
-            background-image: url('../img/icons/arts.svg');
-            background-size: 90px 90px;
-            width: 90px;
-            height: 90px;
-            display: block;
-            position: absolute;
-            top: 50px;
-            left: 180px;
-            z-index: 1;
-        }
-    }
-
-    &::after {
-        content: '';
-        background-image: url('../img/icons/building-blocks.svg');
-        background-size: 120px 120px;
-        width: 120px;
-        height: 120px;
-        display: block;
-        position: absolute;
-        bottom: 500px;
-        left: 80px;
-        z-index: 15;
     }
 
     &__wave-shape {
@@ -55,32 +33,6 @@
         z-index: 2;
         position: relative;
 
-        &::before {
-            content: '';
-            background-image: url('../img/icons/science.svg');
-            background-size: 120px 120px;
-            width: 120px;
-            height: 120px;
-            display: block;
-            position: absolute;
-            top: 50px;
-            right: 180px;
-            z-index: 15;
-        }
-    
-        &::after {
-            content: '';
-            background-image: url('../img/icons/music.svg');
-            background-size: 90px 90px;
-            width: 90px;
-            height: 90px;
-            display: block;
-            position: absolute;
-            bottom: -100px;
-            right: -200px;
-            z-index: 15;
-        }
-       
     }
     &__header-main-content {
         flex-basis: calc((100% / 2) - 2rem);
@@ -407,6 +359,20 @@
         color: $lightPurple;
         position: relative;
         z-index: 1;
+    }
+
+    &__testimonials-stars {
+        .star-rating {
+            display: flex;
+            margin-bottom: 1.5rem;
+            svg {
+                width: 30px;
+                height: 30px;
+                path {
+                    fill: $yellow;
+                }
+            }
+        }
     }
 
 }

@@ -37,9 +37,6 @@
             margin-bottom: 1rem;
         }
     }
-    &__contact-items {
-
-    }
     &__contact-item {
         display: block;
         margin-bottom: 1.4rem;
@@ -51,6 +48,27 @@
             height: 1.2rem;
             margin-right: 1rem;
             vertical-align: middle
+        }
+    }
+    &__copyright {
+        @include container-margins;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        z-index: 11;;
+        margin-bottom: 2.5rem;
+    }
+    &__copyright-text {
+        color: $white;
+        display: inline-block;
+    }
+    &__designed-by {
+        color: $white;
+        display: inline-block;
+        a {
+            color: $blue;
         }
     }
 }

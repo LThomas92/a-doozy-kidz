@@ -21,6 +21,25 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_65ef11984e482",
+            "label": "Testimonial Rating",
+            "name": "testimonial_rating",
+            "aria-label": "",
+            "type": "star_rating_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "max_stars": 5,
+            "return_type": 0,
+            "allow_half": 0,
+            "theme": "default"
         }
     ],
     "location": [
@@ -41,5 +60,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709927410
+    "modified": 1710166448
 }
