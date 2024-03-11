@@ -135,15 +135,13 @@
                     $testimonialRelation = get_field('testimonial_relation' , $testimonial->ID);
                 ?>
         <li class="c-homepage__testimonial">
-            <div class="c-homepage__testimonial-reviews-title">
-                <h4 class="c-homepage__testimonial-title"><?php echo $title; ?></h4>
-                <p class="c-homepage__testimonial-relation"><?php echo $testimonialRelation; ?></p>
                 <ul class="c-homepage__testimonials-stars">
                     <li></li>
                 </ul>
-            </div>
            <div class="c-homepage__testimonial-content"><?php echo $content; ?></div>
-        </li>
+           <h4 class="c-homepage__testimonial-title"><?php echo $title; ?></h4>
+           <p class="c-homepage__testimonial-relation"><?php echo $testimonialRelation; ?></p>
+          </li>
     <?php endforeach; ?>
     </ul>
     <?php 
