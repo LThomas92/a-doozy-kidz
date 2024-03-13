@@ -51,6 +51,7 @@
       position: relative;
       overflow: hidden;
       z-index: 10;
+      box-shadow: $box-shadow-light-black;
       &::before {
         content: "";
         position: relative;
@@ -129,7 +130,7 @@
     }
     &__about-feature-desc {
       color: $lightPurple;
-      font-size: 0.7rem;
+      font-size: 0.95rem;
       padding: 0 0.5rem;
     }
 
@@ -145,7 +146,7 @@
         display: block;
         width: 100%;
         height: 0;
-        padding-bottom: 60%;
+        padding-bottom: 100%;
       }
       img {
         width: 100%;
@@ -169,6 +170,7 @@
     &__how-we-work-content {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
       margin-top: 5rem;
       @include container-margins;
     }
@@ -203,66 +205,135 @@
     &__how-we-work-feature {
       margin-bottom: 2.5rem;
       border-radius: 4px;
-      box-shadow: $box-shadow-light-black--2;
+      box-shadow: -3px 5px 51px -31px rgba(33,186,237,1);
+      background-color: $white;
+      padding: 1rem 1.2rem;
     }
 
     &__how-we-work-feature-title {
-      background-color: $white;
       color: $navyBlue;
-      padding: 1rem 1.2rem;
       font-weight: 500;
-      &:nth-child(odd) {
-        color: $pink;
-      }
-      &:nth-child(even) {
-        color: $blue;
-      }
+      font-size: 1.2rem;
     }
 
     &__how-we-work-feature-description {
-      background-color: $white;
       color: $navyBlue;
-      padding: 1rem 1.2rem;
+      overflow: hidden;
     }
 
-    &__how-we-work-feature-title-icon {
+    &__how-we-work-title-icon {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: $white;
-    }
-
-    &__how-we-work-feature-icon {
-      position: relative;
-      width: 15px;
-      height: 15px;
-      margin-right: 1.5rem;
+      padding-right: 1rem;
       cursor: pointer;
+      &:hover {
+        svg {
+          path {
+            fill: $blue;
+          }
+        }
+      }
 
-      &:before,
-      &:after{
-          content: "";
-          position: absolute;
-          background-color: $blue;
-          transition: transform 0.25s ease-out;
+      svg {
+        width: 25px;
+        height: 25px;
+        transition: 300ms;
+        cursor: pointer;
       }
-    
-      /* Vertical line */
-      &:before{
-          top: 0;
-          left: 50%;
-          width: 4px;
-          height: 100%;
-          margin-left: -2px;
-      }
-    
-      /* horizontal line */
-      &:after{
-          top: 50%;
-          left: 0;
-          width: 100%;
-          height: 4px;
-          margin-top: -2px;
+       
+    }
+
+    &__active-title {
+      color: $blue;
+      svg {
+        transform: rotate(90deg);
+        path {
+          fill: $blue;
+        }
       }
     }
+
+    &__wrapper {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.5s ease-out;
+      p {
+        padding-top: 1.2rem;
+        color: $lightPurple;
+        font-size: 0.9rem;
+      }
+      &.is-open {
+        grid-template-rows: 1fr;
+      }
+    }
+
+    // OUR TEACHER
+
+    &__our-teacher {
+      @include container-margins;
+      margin-top: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    &__our-teacher-subtitle {
+      background-color: $green;
+      color: $white;
+      font-weight: 500;
+      border-radius: 10px;
+      padding: 0.3rem 0.5rem;
+      width: 30%;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    }
+
+    &__our-teacher-main-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__our-teacher-content {
+      flex-basis: calc((100% / 2) - 1rem);
+    }
+
+    &__our-teacher-title {
+      text-align: center;
+      color: $navyBlue;
+      margin: 1.5rem 0;
+    }
+
+    &__our-teacher-image {
+      position: relative;
+      overflow: hidden;
+      margin-top: 1.5rem;
+      flex-basis: calc((100% / 2) - 2rem);
+        &::before {
+          content: "";
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          object-fit: cover;
+          transition: .3s cubic-bezier(.64,.04,.35,1);
+          border-radius: 50%;
+          border: 8px solid $pink;
+        }
+    }
+
+    &__our-teacher-desc {
+      color: $lightPurple;
+      line-height: 24px;
+    }
+
 }

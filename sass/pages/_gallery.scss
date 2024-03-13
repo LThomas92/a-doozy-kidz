@@ -1,0 +1,43 @@
+.c-gallery {
+    @include container-margins;
+    padding-top: 5rem;
+    padding-bottom: 3.5rem;
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 2rem;
+    }
+    &__list-image {
+        margin-bottom: 2rem;
+      
+        figure {
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 0;
+                padding-bottom: 100%;
+              }
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                object-fit: cover;
+                transition: .3s cubic-bezier(.64,.04,.35,1);
+              }
+        }
+    }
+    &__image-caption {
+        font-size: 0.75rem;
+        color: #c7c7c7;
+        text-align: center;
+        display: block;
+        margin-top: 0.5rem;
+    }
+}

@@ -12,6 +12,7 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+<div class="dark-bg"></div>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,3 +56,16 @@
 	   </div>
 
 	</header><!-- #masthead -->
+
+	<div class="overlay-menu">
+<img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/close.svg" alt="Close Icon"/>
+<div class="header-search-form">
+    <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+  <label>
+      <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'What are you looking for?', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+  </label>
+  <button type="submit" name="submit" value="submit"></button>
+</form>
+    </div> <!-- header search form -->
+
+</div> <!-- overlay menu -->
