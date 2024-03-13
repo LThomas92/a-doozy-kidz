@@ -7,6 +7,10 @@ let blockTriggerHeight = $(window).height() * 0.33;
 
 $( document ).ready(function() {
 
+    $('.c-about-page__how-we-work-feature-icon').click(function(){
+      $(this).addClass('c-about-page');
+    });
+
     if ( jQuery(".gutenberg-styles > *").length &&
     !(window.location.hash != "" && jQuery(window.location.hash).length)
   ) {
