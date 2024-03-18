@@ -1,92 +1,81 @@
 .c-homepage {
-    &__header {
-       width: 100%;
-        background-color: $offWhite;
-        background-image: url('../img/header-bg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        margin-bottom: 10rem;
-        padding-top: 2rem;
-        z-index: 10;
+    //HOMEPAGE SECTION
 
-    }
-
-    &__wave-shape {
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 0;
-        display: block;
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
-
-    &__header-content {
+    &__header-section {
         @include container-margins;
-        padding-top: 5rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 2;
-        position: relative;
+        margin-top: 2rem;
+    }
 
+    &__header-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
     }
-    &__header-main-content {
-        flex-basis: calc((100% / 2) - 2rem);
-        position: relative;
-    }
-    &__header-small-title {
-        margin-bottom: 1.5rem;
-        font-weight: 500;
-        font-size: 1rem;
-        background-color: $orange;
-        color: $white;
-        width: 30%;
-        border-radius: 10px;
-        letter-spacing: 1.4px;
-        padding: 0.2rem 0.6rem;
-        text-align: center;
-    }
-    &__header-title {
-        font-weight: 600;
-        letter-spacing: 1.8px;
-        color: $navyBlue;
-        margin-bottom: 1.5rem;
-    }
-    &__header-desc {
-        color: $lightPurple;
-    }
-    &__header-cta {
-        background-color: $navyBlue;
-        color: $white;
-        display: inline-block;
-        margin-top: 3rem;
-        padding: 1.2rem 1.5rem;
-        border-radius: 25px;
-    }
+
     &__header-image {
-        flex-basis: calc((100% / 2) - 2rem);
-        z-index: 10;
-        position: relative; // Ensure the parent container is positioned
-        top: 3rem;
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            display: block;
-            position: relative; // Position the image absolutely within the container
-            z-index: 1;
+        margin-bottom: 2.5rem;
+        figure {
+            position: relative;
+            overflow: hidden;
+            box-shadow: $box-shadow-light-black;
+            &::before {
+                content: "";
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 0;
+                padding-bottom: 80%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                object-fit: cover;
+                transition: .3s cubic-bezier(.64,.04,.35,1);
+                &:hover {
+                    transform: scale(1.05);
+                  }
+            }
         }
     }
+
+
+    &__header-big-image {
+        figure {
+            position: relative;
+            overflow: hidden;
+            box-shadow: $box-shadow-light-black;
+            &::before {
+                content: "";
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 0;
+                padding-bottom: 115%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                object-fit: cover;
+                transition: .3s cubic-bezier(.64,.04,.35,1);
+                &:hover {
+                    transform: scale(1.05);
+                  }
+            }
+        }
+    }
+
+
 
     //ABOUT SECTION
 
     &__about-section {
         @include container-margins;
-        margin-top: 15rem;
     }
 
     &__about-content {
@@ -176,7 +165,7 @@
             height: 15px;
             display: inline-block;
             vertical-align: middle;
-            margin-right: 1rem;
+            margin-right: 0.4rem;
         }
     }
 

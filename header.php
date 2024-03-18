@@ -12,7 +12,6 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
-<div class="dark-bg"></div>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +27,20 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'a-dooyz-kidz' ); ?></a>
+
+	<div class="site-header__container">
+
+	<div class="site-header__newsletter-container">
+	<div class="site-header__newsletter">
+		<p class="site-header__newsletter-text">
+			<?php echo get_field('newsletter_text', 'option'); ?>
+		</p>
+		<div class="site-header__newsletter-signup">
+			<input placeholder="Enter your email address" type="email"/>
+			<a class="site-header__newsletter-cta" href="">Sign up</a>
+		</div>
+	</div>
+	</div>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -56,6 +69,7 @@
 	   </div>
 
 	</header><!-- #masthead -->
+	</div>
 
 	<div class="overlay-menu">
 <img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/close.svg" alt="Close Icon"/>
