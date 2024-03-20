@@ -38,12 +38,10 @@
 
 		<div class="site-footer__contact-section">
 			<?php 
-				$address = get_field('footer_address', 'option');
 				$phone = get_field('footer_phone_number', 'option');
 				$email = get_field('footer_email', 'option');
 			?>
 			<ul class="site-footer__contact-items">
-				<li class="site-footer__contact-item"><span> <img title="Location Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/location.svg" alt="Location Icon" /></span><?php echo $address; ?></li>
 				<li class="site-footer__contact-item"><span><img title="Phone Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/phone.svg" alt="Phone Icon" /></span><a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></li>
 				<li class="site-footer__contact-item"><span><img title="Email Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/mail.svg" alt="Email Icon" /></span><?php echo $email; ?></li>
 			</ul>

@@ -29,6 +29,36 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'a-dooyz-kidz' ); ?></a>
 
 	<div class="site-header__container">
+	<header id="masthead" class="site-header">
+
+	<nav id="site-navigation" class="main-navigation">
+		
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+			)
+		);
+		?>
+	</nav><!-- #site-navigation -->
+
+
+		<div class="site-branding">
+			<a href="<?php echo site_url(); ?>">
+			<img title="A Doozy Kidz Logo" class="site-header__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="A Doozy Kidz Logo"/>
+			</a>
+		
+		</div><!-- .site-branding -->
+
+			
+	   <div class="site-header__search-cart">
+			<img class="site-header__search" src="<?php echo get_template_directory_uri(); ?>/img/icons/search.svg" alt="Search Icon">
+	   </div>
+
+	</header><!-- #masthead -->
+	</div>
+
 
 	<div class="site-header__newsletter-container">
 	<div class="site-header__newsletter">
@@ -40,35 +70,6 @@
 			<a class="site-header__newsletter-cta" href="">Sign up</a>
 		</div>
 	</div>
-	</div>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<a href="<?php echo site_url(); ?>">
-			<img title="A Doozy Kidz Logo" class="site-header__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="A Doozy Kidz Logo"/>
-			</a>
-		
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-		
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-
-			
-	   <div class="site-header__search-cart">
-			<img class="site-header__search" src="<?php echo get_template_directory_uri(); ?>/img/icons/search.svg" alt="Search Icon">
-			<img class="site-header__cart" src="<?php echo get_template_directory_uri(); ?>/img/icons/cart.svg" alt="Cart Icon">
-	   </div>
-
-	</header><!-- #masthead -->
 	</div>
 
 	<div class="overlay-menu">

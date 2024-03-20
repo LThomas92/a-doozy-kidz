@@ -1,5 +1,5 @@
 .site-footer {
-    background-color: $lightBlack;
+    background-color: $yellow;
     background-image: url('../img/doozy-footer-bg.png');
     background-size: cover;
     background-position: center center;
@@ -28,11 +28,11 @@
         }
     }
     &__description {
-        color: $lightPurple;
+        color: $purple;
     }
     &__navigation {
         li a {
-            color: $lightPurple;
+            color: $purple;
             display: block;
             margin-bottom: 1rem;
         }
@@ -40,9 +40,9 @@
     &__contact-item {
         display: block;
         margin-bottom: 1.4rem;
-        color: $lightPurple;
+        color: $purple;
         a {
-            color: $lightPurple;
+            color: $purple;
         }
         img {
             height: 1.2rem;
