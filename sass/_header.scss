@@ -51,6 +51,13 @@
         color: $white;
         padding: 0.5rem 0.8rem;
      }
+     &__art-section-cta {
+        background-color: $white;
+        color: $black;
+        padding: 0.8rem 1.2rem;
+        text-align: center;
+        display: block;
+     }
 }
 
 .site-branding {

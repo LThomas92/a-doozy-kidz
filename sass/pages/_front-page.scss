@@ -110,15 +110,18 @@
         margin-bottom: 2rem;
         font-size: 3rem;
         font-weight: 500;
-        color: $navyBlue;
+        color: $orange;
     }
 
     &__about-desc {
-        text-align: center;
-        margin-bottom: 3.5rem;
-        color: $lightPurple;
-        padding: 0 4rem;
-        letter-spacing: 1.2px;
+        p {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: $lightPurple;
+            padding: 0 4rem;
+            letter-spacing: 1.2px;
+        }
+        margin-bottom: 4rem;
     }
 
     &__about-image-features {
@@ -153,11 +156,27 @@
               }
         }
     }
+
+    &__fun-dayz-section {
+        margin-bottom: 4rem;
+        p {
+            display: block;
+            margin-bottom: 1.5rem;
+            color: $white;
+        }
+    }
     
     &__about-features-title {
         margin-bottom: 1.2rem;
-        font-weight: 400;
-        color: $blue;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: $orange;
+        text-align: center;
+    }
+
+    &__about-features-section {
+        background-color: $darkYellow;
+        padding: 2.5rem 1.5rem;
     }
 
     &__about-features {
@@ -179,101 +198,11 @@
     }
 
     &__about-cta {
-        background-color: $navyBlue;
+        background-color: $green;
         color: $white;
         padding: 1.2rem 1.5rem;
-        border-radius: 25px;
     }
 
-   
-
-    &__classes-section {
-        text-align: center;
-        padding-top: 5rem;
-        padding-bottom: 8rem;
-        background-color: rgba($lightTan, 0.4);
-        width: 100vw;
-        position: relative;
-        left: calc((50% - 50vw));
-    }
-    &__classes-title {
-        font-size: 2.5rem;
-        font-weight: 500;
-        letter-spacing: 1.6px;
-        margin-bottom: 2rem;
-        color: $navyBlue;
-    }
-
-    &__classes-desc {
-        margin-top: 1.5rem;
-        margin-bottom: 3rem;
-        p {
-            text-align: center;
-            color: $lightPurple;
-        }
-    }
-
-    &__classes-cta {
-        background-color: $pink;
-        color: $white;
-        border-radius: 10px;
-        width: 50%;
-        padding: 1rem 1.8rem;
-    }
-
-    &__classes {
-        display: flex;
-        justify-content: space-between;
-        @include container-margins;
-        padding-bottom: 5rem;
-    }
-    &__class {
-        flex-basis: calc((100% / 3) - 2rem);
-        margin-top: 1.5rem;
-        background-color: $white;
-        padding: 1.5rem 2rem;
-        box-shadow: $box-shadow-light-black;
-        border-radius: 4px;
-    }
-    &__class-content {
-        margin-top: 1.2rem;
-    }
-    &__class-title {
-        font-weight: 500;
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        color: $navyBlue;
-    }
-    &__class-desc {
-        margin-bottom: 1.2rem;
-        color: $lightPurple;
-    }
-    &__class-price {
-        color: $pink;
-        font-weight: 500;
-    }
-    &__class-img {
-        position: relative;
-        overflow: hidden;
-        border-radius: 5px;
-        &::before {
-            content: "";
-            position: relative;
-            display: block;
-            width: 100%;
-            height: 0;
-            padding-bottom: 66.5%;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-    }
 
     &__testimonials {
         background-color: $navyBlue;
