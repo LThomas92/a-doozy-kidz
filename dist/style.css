@@ -32,7 +32,7 @@
   .site-header__container {
     background-color: #fd800a; }
   .site-header__newsletter-container {
-    background-color: #299040;
+    background-color: #FDD76B;
     padding: 0.5rem 0; }
   .site-header__newsletter {
     width: 100%;
@@ -902,6 +902,22 @@
   @media (max-width: 767px) {
     .c-contact-us {
       width: calc(100vw - calc(16px * 2)); } }
+  .c-contact-us .gform_title {
+    color: #fd800a;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 5rem; }
+  .c-contact-us .gfield_label, .c-contact-us input[type="text"], .c-contact-us input[type="email"], .c-contact-us input[type="tel"], .c-contact-us textarea {
+    font-family: "Lato", sans-serif; }
+  .c-contact-us .gfield_label {
+    color: #21BAED; }
+  .c-contact-us #gform_submit_button_1 {
+    font-family: "Lato", sans-serif;
+    background-color: #299040; }
+  .c-contact-us #gform_1 {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 4rem; }
 
 body {
   position: relative;
