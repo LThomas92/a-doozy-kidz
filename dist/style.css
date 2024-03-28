@@ -34,6 +34,9 @@
   .site-header__newsletter-container {
     background-color: #FDD76B;
     padding: 0.5rem 0; }
+    @media only screen and (max-width: 1024px) {
+      .site-header__newsletter-container {
+        padding: 1.5rem 0; } }
   .site-header__newsletter {
     width: 100%;
     width: calc(100vw - calc(16px * 2));
@@ -49,8 +52,14 @@
     @media (max-width: 767px) {
       .site-header__newsletter {
         width: calc(100vw - calc(16px * 2)); } }
+    @media only screen and (max-width: 1024px) {
+      .site-header__newsletter {
+        flex-direction: column; } }
   .site-header__newsletter-text {
     color: #fff; }
+    @media only screen and (max-width: 1024px) {
+      .site-header__newsletter-text {
+        margin-bottom: 1rem; } }
   .site-header__newsletter-signup input[type="email"] {
     border: none;
     outline: none;
@@ -170,7 +179,7 @@
   z-index: 5; }
   .site-footer::after {
     content: '';
-    background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0idmlzdWFsIiB2aWV3Qm94PSIwIDAgOTAwIDIwMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSIyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSI+PHBhdGggZD0iTTAgMTE5TDE4LjggMTE5LjNDMzcuNyAxMTkuNyA3NS4zIDEyMC4zIDExMi44IDEyMy41QzE1MC4zIDEyNi43IDE4Ny43IDEzMi4zIDIyNS4yIDEzNy43QzI2Mi43IDE0MyAzMDAuMyAxNDggMzM3LjggMTQ4LjNDMzc1LjMgMTQ4LjcgNDEyLjcgMTQ0LjMgNDUwLjIgMTQwLjdDNDg3LjcgMTM3IDUyNS4zIDEzNCA1NjIuOCAxMzAuNUM2MDAuMyAxMjcgNjM3LjcgMTIzIDY3NS4yIDEyMC43QzcxMi43IDExOC4zIDc1MC4zIDExNy43IDc4Ny44IDEyMC41QzgyNS4zIDEyMy4zIDg2Mi43IDEyOS43IDg4MS4zIDEzMi44TDkwMCAxMzZMOTAwIDIwMUw4ODEuMyAyMDFDODYyLjcgMjAxIDgyNS4zIDIwMSA3ODcuOCAyMDFDNzUwLjMgMjAxIDcxMi43IDIwMSA2NzUuMiAyMDFDNjM3LjcgMjAxIDYwMC4zIDIwMSA1NjIuOCAyMDFDNTI1LjMgMjAxIDQ4Ny43IDIwMSA0NTAuMiAyMDFDNDEyLjcgMjAxIDM3NS4zIDIwMSAzMzcuOCAyMDFDMzAwLjMgMjAxIDI2Mi43IDIwMSAyMjUuMiAyMDFDMTg3LjcgMjAxIDE1MC4zIDIwMSAxMTIuOCAyMDFDNzUuMyAyMDEgMzcuNyAyMDEgMTguOCAyMDFMMCAyMDFaIiBmaWxsPSIjNjEzMTkxIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiPjwvcGF0aD48L3N2Zz4=);
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9InZpc3VhbCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDkwMCAyMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDkwMCAyMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkRENzZCO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTAsMTE5bDE4LjgsMC4zYzE4LjksMC40LDU2LjUsMSw5NCw0LjJzNzQuOSw4LjgsMTEyLjQsMTQuMmMzNy41LDUuMyw3NS4xLDEwLjMsMTEyLjYsMTAuNgoJYzM3LjUsMC40LDc0LjktNCwxMTIuNC03LjZjMzcuNS0zLjcsNzUuMS02LjcsMTEyLjYtMTAuMnM3NC45LTcuNSwxMTIuNC05LjhjMzcuNS0yLjQsNzUuMS0zLDExMi42LTAuMnM3NC45LDkuMiw5My41LDEyLjNMOTAwLDEzNgoJdjY1aC0xOC43Yy0xOC42LDAtNTYsMC05My41LDBzLTc1LjEsMC0xMTIuNiwwcy03NC45LDAtMTEyLjQsMHMtNzUuMSwwLTExMi42LDBzLTc0LjksMC0xMTIuNCwwcy03NS4xLDAtMTEyLjYsMHMtNzQuOSwwLTExMi40LDAKCXMtNzUuMSwwLTk0LDBIMFYxMTl6Ii8+Cjwvc3ZnPgo=);
     background-size: cover;
     z-index: -1;
     width: 100%;
@@ -257,9 +266,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem; }
+  @media only screen and (max-width: 1024px) {
+    .c-homepage__header-images {
+      grid-template-columns: 1fr; } }
 
 .c-homepage__header-image {
   margin-bottom: 2.5rem; }
+  @media only screen and (max-width: 1024px) {
+    .c-homepage__header-image {
+      margin-bottom: 1rem; } }
   .c-homepage__header-image figure {
     position: relative;
     overflow: hidden;
@@ -281,41 +296,6 @@
       transition: 0.3s cubic-bezier(0.64, 0.04, 0.35, 1); }
       .c-homepage__header-image figure img:hover {
         transform: scale(1.05); }
-  .c-homepage__header-image:nth-child(1) .c-homepage__header-cta {
-    color: #613191;
-    border: 1.2px solid #613191;
-    padding: 1.2rem 1.5rem;
-    border-radius: 25px; }
-    .c-homepage__header-image:nth-child(1) .c-homepage__header-cta:hover {
-      background-color: #613191;
-      color: #fff; }
-  .c-homepage__header-image:nth-child(2) .c-homepage__header-cta {
-    color: #21BAED;
-    border: 1.2px solid #21BAED;
-    padding: 1.2rem 1.5rem;
-    border-radius: 25px; }
-    .c-homepage__header-image:nth-child(2) .c-homepage__header-cta:hover {
-      background-color: #21BAED;
-      color: #fff; }
-  .c-homepage__header-image:nth-child(3) .c-homepage__header-cta {
-    color: #299040;
-    border: 1.2px solid #299040;
-    padding: 1.2rem 1.5rem;
-    border-radius: 25px; }
-    .c-homepage__header-image:nth-child(3) .c-homepage__header-cta:hover {
-      background-color: #299040;
-      color: #fff; }
-
-.c-homepage__header-cta {
-  padding: 1.2rem 1.5rem;
-  border-radius: 25px;
-  display: inline-block;
-  margin: 0 auto;
-  margin-top: 1.5rem;
-  transition: all 300ms ease-in; }
-
-.c-homepage__header-cta-container {
-  text-align: center; }
 
 .c-homepage__about-section {
   width: calc(100vw - calc(16px * 2));
@@ -339,6 +319,9 @@
   font-size: 3rem;
   font-weight: 500;
   color: #fd800a; }
+  @media only screen and (max-width: 1024px) {
+    .c-homepage__about-title {
+      font-size: 2rem; } }
 
 .c-homepage__about-desc {
   margin-bottom: 4rem; }
@@ -348,12 +331,20 @@
     color: #969CAC;
     padding: 0 4rem;
     letter-spacing: 1.2px; }
+    @media only screen and (max-width: 1024px) {
+      .c-homepage__about-desc p {
+        padding: 0 2rem; } }
 
 .c-homepage__about-image-features {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 6rem;
   align-items: center; }
+  @media only screen and (max-width: 1024px) {
+    .c-homepage__about-image-features {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 2rem; } }
 
 .c-homepage__about-image {
   position: relative;
@@ -392,7 +383,7 @@
   text-align: center; }
 
 .c-homepage__about-features-section {
-  background-color: #B7AC44;
+  background-color: #FDD76B;
   padding: 2.5rem 1.5rem; }
 
 .c-homepage__about-features {
@@ -837,14 +828,6 @@
       margin-bottom: 2.5rem; }
     .c-fun-dayz-sessions__schedule p {
       margin-bottom: 1.2rem; }
-  .c-fun-dayz-sessions__cta-container {
-    text-align: center; }
-  .c-fun-dayz-sessions__booking-cta {
-    background-color: #299040;
-    color: #fff;
-    text-align: center;
-    margin: 0 auto;
-    padding: 1.2rem 1.7rem; }
 
 .c-gallery {
   width: calc(100vw - calc(16px * 2));

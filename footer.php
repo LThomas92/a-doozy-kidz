@@ -51,10 +51,9 @@
 		<div class="site-footer__copyright">
 		<?php 
 			$copyright = get_field('copyright', 'option');
-			$designedBy = get_field('designed_by', 'option');
 		?>
 			<p class="site-footer__copyright-text"><?php echo $copyright;?></p>
-			<p class="site-footer__designed-by">Designed by <a target="_blank" href="<?php echo $designedBy; ?>">Laws & Codes</a></p>
+	
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

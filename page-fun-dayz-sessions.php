@@ -25,9 +25,11 @@
       <?php echo $schedule; ?>
 </div>
 
-<div class="c-fun-dayz-sessions__cta-container">
 
-<a class="c-fun-dayz-sessions__booking-cta" href="<?php echo $bookingCTA['url']; ?>"><?php echo $bookingCTA['title']; ?></a>
+
+<div class="c-fun-dayz-sessions__booking-section">
+      <?php echo the_content(); ?>
+</div>
 
 </div>
 
