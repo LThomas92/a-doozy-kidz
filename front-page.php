@@ -35,38 +35,38 @@ endif; ?>
             <?php 
                 $title = get_field('about_title');
                 $desc = get_field('about_description');
-                $subTitle = get_field('about_subtitle');
-                $content = get_field('about_content');
-                $cta = get_field('about_cta');
-                $image = get_field('about_image');
             ?>
 
             <div class="c-homepage__about-content">
                 <h2 class="c-homepage__about-title"><?php echo $title; ?></h2>
                 <div class="c-homepage__about-desc"><?php echo $desc; ?></div>
-
-                <div class="c-homepage__about-image-features">
-
-                <figure class="c-homepage__about-image">
-                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-            </figure>
+</div>
 
 
-                <div class="c-homepage__about-features-section">
+<?php if( have_rows('about_images') ): ?>
 
-                <h3 class="c-homepage__about-features-title"><?php echo $subTitle; ?></h3>
+    <ul class="c-homepage__about-images">
+    <?php while( have_rows('about_images') ) : the_row();
 
-                <div class="c-homepage__fun-dayz-section">
-                    <?php echo $content; ?>
-                </div>
-            
-    <a class="c-homepage__about-cta" href="<?php echo $cta['url']; ?>"><?php echo $cta['title']; ?></a>
+        $aboutImage = get_sub_field('about_image'); ?>
+        <li class="c-homepage__about-image">
+          <figure>
+            <img src="<?php echo $aboutImage['url']; ?>" alt="<?php echo $aboutImage['alt']; ?>">
+          </figure>
+        </li>
+
+    
+    <?php endwhile; ?>
+    </ul>
+
+<?php 
+else :
+    // Do something...
+endif; ?>
+
+
 
     </div>
-    </div>
-
-
-
         </div>
 </div>
 

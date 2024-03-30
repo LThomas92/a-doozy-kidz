@@ -33,23 +33,40 @@
 		<p class="site-header__newsletter-text">
 			<?php echo get_field('newsletter_text', 'option'); ?>
 		</p>
+    
 		<div class="site-header__newsletter-signup">
-			<input placeholder="Enter your email address" type="email"/>
-			<a class="site-header__newsletter-cta" href="">Sign up</a>
+      <?php echo get_field('newsletter_form', 'option'); ?>
+      <div class="site-branding__contact">
+      <a class="site-branding__email" href="mailto:itzadoozykidz@gmail.com">itzadoozykidz@gmail.com</a>
+      <a target="_blank" href="https://www.instagram.com/itz_a_doozy_kidz/" class="site-branding__sm">Follow us @itz_a_doozy_kidz</a>
+    </div>
 		</div>
 	</div>
 	</div>
 	<div class="site-header__container">
 	<header id="masthead" class="site-header">
 
+  <?php 
+		$funDayzCTA = get_field('cta_link', 'option');
+	?>
+
+	<a href="<?php echo $funDayzCTA['url']; ?>" class="site-header__art-section-cta"><?php echo $funDayzCTA['title']; ?></a>
+
 	<div class="site-branding">
-			<a href="<?php echo site_url(); ?>">
+  <a href="<?php echo site_url(); ?>">
 			<img title="A Doozy Kidz Logo" class="site-header__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="A Doozy Kidz Logo"/>
 			</a>
 		
 		</div><!-- .site-branding -->
 
-	<nav id="site-navigation" class="main-navigation">
+  <div class="main-navigation-container">
+
+
+  <img class="site-header__menu-icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/menu.svg" alt="Menu Icon">
+
+	
+  
+  <nav id="site-navigation" class="main-navigation">
 		
 		<?php
 		wp_nav_menu(
@@ -61,26 +78,35 @@
 		?>
 	</nav><!-- #site-navigation -->
 
-	<?php 
-		$funDayzCTA = get_field('cta_link', 'option');
-	?>
+  </div>
 
-	<a href="<?php echo $funDayzCTA['url']; ?>" class="site-header__art-section-cta"><?php echo $funDayzCTA['title']; ?></a>
-
+	
 	</header><!-- #masthead -->
 	</div>
 
 
+<!-- MOBILE MENU -->
 
-	<div class="overlay-menu">
-<img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/close.svg" alt="Close Icon"/>
-<div class="header-search-form">
-    <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-  <label>
-      <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'What are you looking for?', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-  </label>
-  <button type="submit" name="submit" value="submit"></button>
-</form>
-    </div> <!-- header search form -->
+  <div class="mobile-menu-overlay">
+	<div class="mobile-menu-overlay__container">
+	<div class="mobile-menu-overlay__header">
+	<img class="mobile-menu-overlay__close-icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/close-white.svg" alt="Close Icon"/>
 
-</div> <!-- overlay menu -->
+	<a href="<?php echo site_url(); ?>">
+    <img title="It'z a Doozy Kidz Logo" class="mobile-menu-overlay__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="It'z A Doozy Kidz Logo"/>
+    </a>
+	</div>
+  <nav class="mobile-navigation">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+			?>
+		
+		</nav><!-- #site-navigation -->
+    <a href="<?php echo $funDayzCTA['url']; ?>" class="site-header__art-section-cta"><?php echo $funDayzCTA['title']; ?></a>
+		</div>
+  </div>

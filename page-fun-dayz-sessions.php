@@ -6,29 +6,43 @@
 
 <?php $title = get_field('title');
       $content = get_field('content');
-      $image = get_field('main_image');
-      $schedule = get_field('schedule');
+      $smallImage = get_field('small_image');
       $bookingCTA = get_field('booking_cta');
 ?>
 
 <h1 class="c-fun-dayz-sessions__title"><?php echo $title;?></h1>
 
+<?php if( have_rows('session_images') ): ?>
+
+<ul class="c-fun-dayz-sessions__images">
+<?php while( have_rows('session_images') ) : the_row();
+
+    $sessionImage = get_sub_field('image'); ?>
+    <li class="c-fun-dayz-sessions__image">
+      <figure>
+        <img src="<?php echo $sessionImage['url']; ?>" alt="<?php echo $sessionImage['alt']; ?>">
+      </figure>
+    </li>
+
+
+<?php endwhile; ?>
+</ul>
+
+<?php 
+else :
+// Do something...
+endif; ?>
+
+
+
+
 <div class="c-fun-dayz-sessions__content">
       <?php echo $content; ?>
 </div>
 
-<figure class="c-fun-dayz-sessions__image">
-      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
-</figure>
 
-<div class="c-fun-dayz-sessions__schedule">
-      <?php echo $schedule; ?>
-</div>
-
-
-
-<div class="c-fun-dayz-sessions__booking-section">
-      <?php echo the_content(); ?>
+<div class="c-fun-dayz-sessions__cta-container">
+<a class="c-fun-dayz-sessions__cta" href="<?php echo $bookingCTA['url']; ?>"><?php echo $bookingCTA['title']; ?></a>
 </div>
 
 </div>

@@ -6,12 +6,14 @@
         text-align: center;
         margin-top: 3rem;
         margin-bottom: 5rem;
+        font-size: 3rem;
+        font-weight: 500;
     }
     .gfield_label, input[type="text"], input[type="email"], input[type="tel"], textarea  {
         font-family: $lato;
     }
     .gfield_label {
-        color: $blue;
+        color: $black;
     }
     #gform_submit_button_1 {
         font-family: $lato;

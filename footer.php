@@ -22,7 +22,6 @@
 				<img title="It'z A Doozy Kidz Logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="It'z A Doozy Kidz Logo">
 			</a>
 
-		<p class="site-footer__description"><?php echo $footerDesc; ?></p>
 		</div>
 
 		<nav class="site-footer__navigation">
@@ -38,12 +37,10 @@
 
 		<div class="site-footer__contact-section">
 			<?php 
-				$phone = get_field('footer_phone_number', 'option');
 				$email = get_field('footer_email', 'option');
 			?>
 			<ul class="site-footer__contact-items">
-				<li class="site-footer__contact-item"><span><img title="Phone Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/phone.svg" alt="Phone Icon" /></span><a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></li>
-				<li class="site-footer__contact-item"><span><img title="Email Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/mail.svg" alt="Email Icon" /></span><?php echo $email; ?></li>
+				<li class="site-footer__contact-item"><span><img title="Email Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/mail.svg" alt="Email Icon" /></span><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></li>
 			</ul>
 		</div>
 

@@ -1,21 +1,34 @@
 .c-fun-dayz-sessions {
     @include container-margins;
-    padding: 5rem 0;
+    padding-bottom: 2.5rem;
     &__title {
         text-align: center;
         font-weight: 500;
+        font-size: 3rem;
         color: $orange;
     }
-    &__content {
 
+    &__images {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem;
+      @media only screen and (max-width: $tablet_max) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__content {
         p {
             display: block;
             margin-top: 2rem;
+            font-size: 2rem;
         }
     }
+
     &__image {
         position: relative;
         overflow: hidden;
+        box-shadow: $box-shadow-light-black;
         margin-top: 2.5rem;
         &::before {
             content: "";
@@ -23,7 +36,7 @@
             display: block;
             width: 100%;
             height: 0;
-            padding-bottom: 65%;
+            padding-bottom: 100%;
         }
         img {
             width: 100%;
@@ -39,15 +52,44 @@
         }
     }
 
+    &__small-image {
+      position: relative;
+      overflow: hidden;
+      box-shadow: $box-shadow-light-black;
+      margin-top: 2.5rem;
+      &::before {
+          content: "";
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+      }
+      img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          object-fit: cover;
+          transition: .3s cubic-bezier(.64,.04,.35,1);
+          &:hover {
+              transform: scale(1.05);
+            }
+      }
+    }
 
-    &__schedule {
-        margin-top: 2rem;
-        h3 {
-            margin-bottom: 2.5rem;
-        }
-        p {
-            margin-bottom: 1.2rem;
-        }
+    &__cta-container {
+      text-align: center;
+    }
+
+    &__cta {
+      background-color: $green;
+      color: $white;
+      text-align: center;
+      display: inline-block;
+      padding: 1.2rem 1.8rem;
+      margin-top: 2rem;
     }
 
 }

@@ -23,6 +23,56 @@
             "append": ""
         },
         {
+            "key": "field_6606e70015c47",
+            "label": "Session Images",
+            "name": "session_images",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Image",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6606e70f15c48",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_6606e70015c47"
+                }
+            ]
+        },
+        {
             "key": "field_660458c6e776d",
             "label": "Content",
             "name": "content",
@@ -44,8 +94,8 @@
         },
         {
             "key": "field_660459134b1f2",
-            "label": "Main Image",
-            "name": "main_image",
+            "label": "Small Image",
+            "name": "small_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -68,11 +118,11 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6604591c4b1f3",
-            "label": "Schedule",
-            "name": "schedule",
+            "key": "field_6606e747412e9",
+            "label": "Booking CTA",
+            "name": "booking_cta",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -81,11 +131,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "return_format": "array"
         }
     ],
     "location": [
@@ -93,7 +139,7 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "233"
+                "value": "182"
             }
         ]
     ],
@@ -106,5 +152,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711640871
+    "modified": 1711728468
 }

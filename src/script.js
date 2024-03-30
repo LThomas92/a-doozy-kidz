@@ -8,29 +8,18 @@ let blockTriggerHeight = $(window).height() * 0.33;
 
 $( document ).ready(function() {
 
-  $('.c-about-page__how-we-work-title-icon').click(function() {
-    var termTitle = $(this).attr('key');
-    $(this).toggleClass('c-about-page__active-title').siblings().removeClass('c-about-page__active-title');
+  //Mobile Menu
 
+  $('.site-header__menu-icon').click(function() {
+    $(this).toggleClass('open');
+    $('.mobile-menu-overlay').toggleClass('mobile-menu-overlay__active');
+  });
 
-  $('.c-about-page__wrapper').each(function() {
-    if($(this).attr('key') == termTitle) {
-      $(this).toggleClass('is-open').siblings().removeClass('is-open');
-    }
-
+  $('.mobile-menu-overlay__close-icon').click(function() {
+    $('.mobile-menu-overlay').removeClass('mobile-menu-overlay__active');
   });
   
-});
 
-//Search
-
-$('.site-header__search').click(function() {
-  $(".overlay-menu").addClass("show-overlay-menu");
-});
-
-$(".close-icon").click(function () {
-  $(".overlay-menu").removeClass("show-overlay-menu");
-});
 
 
 // Gallery Page

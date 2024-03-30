@@ -1,13 +1,13 @@
 {
-    "key": "group_65f869dbae356",
-    "title": "Options: Header",
+    "key": "group_660727354a0b0",
+    "title": "Pages: Fun Dayz Booking",
     "fields": [
         {
-            "key": "field_65f869db47be3",
-            "label": "Newsletter Text",
-            "name": "newsletter_text",
+            "key": "field_6607273512b7a",
+            "label": "Image",
+            "name": "image",
             "aria-label": "",
-            "type": "text",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,32 +16,21 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
-            "key": "field_660443e9f8454",
-            "label": "CTA Link",
-            "name": "cta_link",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_6606f6b28432a",
-            "label": "Newsletter Form",
-            "name": "newsletter_form",
+            "key": "field_6607280becb20",
+            "label": "Content",
+            "name": "content",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -62,9 +51,9 @@
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "page",
                 "operator": "==",
-                "value": "acf-options"
+                "value": "188"
             }
         ]
     ],
@@ -77,5 +66,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711732416
+    "modified": 1711745045
 }

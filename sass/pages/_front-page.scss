@@ -31,7 +31,7 @@
                 display: block;
                 width: 100%;
                 height: 0;
-                padding-bottom: 80%;
+                padding-bottom: 100%;
             }
             img {
                 width: 100%;
@@ -53,11 +53,10 @@
 
     &__about-section {
         @include container-margins;
-        margin-top: 2.5rem;
     }
 
     &__about-content {
-        padding-bottom: 8rem;
+        padding-bottom: 2rem;
     }
 
 
@@ -74,11 +73,12 @@
 
     &__about-desc {
         p {
-            text-align: center;
+            text-align: left;
             margin-bottom: 2rem;
-            color: $lightPurple;
+            color: $black;
             padding: 0 4rem;
             letter-spacing: 1.2px;
+            font-size: 2rem;
             @media only screen and (max-width: $tablet_max) {
                 padding: 0 2rem;
             }
@@ -86,29 +86,27 @@
         margin-bottom: 4rem;
     }
 
-    &__about-image-features {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 6rem;
-        align-items: center;
-        @media only screen and (max-width: $tablet_max) {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 2rem;
-        }
+    &__about-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem;
+      margin-bottom: 4rem;
+      @media only screen and (max-width: $tablet_max) {
+        grid-template-columns: 1fr;
+    }
     }
 
     &__about-image {
         position: relative;
         overflow: hidden;
-        border: 5px dotted $yellow;
+        box-shadow: $box-shadow-light-black;
         &::before {
             content: "";
             position: relative;
             display: block;
             width: 100%;
             height: 0;
-            padding-bottom: 65%;
+            padding-bottom: 100%;
         }
         img {
             width: 100%;
@@ -123,150 +121,9 @@
               }
         }
     }
-
-    &__fun-dayz-section {
-        margin-bottom: 4rem;
-        p {
-            display: block;
-            margin-bottom: 1.5rem;
-            color: $white;
-        }
-    }
     
-    &__about-features-title {
-        margin-bottom: 1.2rem;
-        font-weight: 600;
-        font-size: 1.5rem;
-        color: $orange;
-        text-align: center;
-    }
-
-    &__about-features-section {
-        background-color: $yellow;
-        padding: 2.5rem 1.5rem;
-    }
-
     &__about-features {
-        margin-bottom: 5rem;
-    }
-
-    &__about-feature {
-        margin-bottom: 1.2rem;
-        &::before {
-            content: '';
-            background-image: url('../img/icons/gold-star.svg');
-            background-size: 15px 15px;
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 0.4rem;
-        }
-    }
-
-    &__about-cta {
-        background-color: $green;
-        color: $white;
-        padding: 1.2rem 1.5rem;
-    }
-
-
-    &__testimonials {
-        background-color: $navyBlue;
-        width: 100vw;
-        position: relative;
-        left: calc(50% - 50vw);
-        padding: 3.5rem 0;
-    }
-
-    &__testimonials-title {
-        color: $white;
-        font-size: 2.2rem;
-        font-weight: 600;
-        letter-spacing: 1.4px;
-    }
-
-    &__testimonial-cta-container {
-        text-align: right;
-    }
-
-    &__testimonials-cta {
-        display: inline-block;
-        color: $white;
-        background-color: $pink;
-        padding: 1rem 1.6rem;
-        border-radius: 10px;
-    }
-
-    &__testimonials-content {
-        @include container-margins;
-    }
-
-    &__testimonials-list {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 4.5rem;
-    }
-
-    &__testimonial {
-        // flex-basis: calc((100% / 2) - 4rem);
-        // margin-top: 2rem;
-        position: relative;
-        background: $white;
-	      border-radius: .4em;
-        padding: 1.5rem;
-        max-width: 45%;
-        width: 100%;
-        box-shadow: $box-shadow-light-blue;
-
-        &::before {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 0;
-          height: 0;
-          border: 20px solid transparent;
-          border-top-color: $white;
-          border-bottom: 0;
-          border-left: 0;
-          margin-left: -10px;
-          margin-bottom: -20px;
-        }
-    }
-
-    &__testimonial-title {
-        color: $navyBlue;
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
-        font-weight: 400;
-    }
-
-    &__testimonial-relation {
-        color: $pink;
-        font-weight: 600;
-        font-size: 0.8rem;
-        margin-bottom: 1.5rem;
-    }
-
-    &__testimonial-content {
-        color: $lightPurple;
-        position: relative;
-        z-index: 1;
-    }
-
-    &__testimonials-stars {
-        .star-rating {
-            display: flex;
-            margin-bottom: 1.5rem;
-            svg {
-                width: 30px;
-                height: 30px;
-                path {
-                    fill: $yellow;
-                }
-            }
-        }
+        margin-bottom: 2rem;
     }
 
 }
