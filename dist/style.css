@@ -341,7 +341,7 @@
 .c-homepage__about-title {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 500;
   color: #fd800a; }
   @media only screen and (max-width: 1024px) {
@@ -356,10 +356,10 @@
     color: #000;
     padding: 0 4rem;
     letter-spacing: 1.2px;
-    font-size: 2rem; }
+    font-size: 1.8rem; }
     @media only screen and (max-width: 1024px) {
       .c-homepage__about-desc p {
-        padding: 0 2rem; } }
+        padding: 0; } }
 
 .c-homepage__about-images {
   display: grid;
@@ -698,7 +698,7 @@
   .c-fun-dayz-sessions__title {
     text-align: center;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fd800a; }
   .c-fun-dayz-sessions__images {
     display: grid;
@@ -710,7 +710,7 @@
   .c-fun-dayz-sessions__content p {
     display: block;
     margin-top: 2rem;
-    font-size: 2rem; }
+    font-size: 1.8rem; }
   .c-fun-dayz-sessions__image {
     position: relative;
     overflow: hidden;
