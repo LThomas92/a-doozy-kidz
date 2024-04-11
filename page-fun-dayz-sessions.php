@@ -45,6 +45,10 @@ endif; ?>
 <a class="c-fun-dayz-sessions__cta" href="<?php echo $bookingCTA['url']; ?>"><?php echo $bookingCTA['title']; ?></a>
 </div>
 
+<div class="c-fun-dayz-sessions__booking-section">
+  <?php echo the_content(); ?>
+</div>
+
 </div>
 
 
