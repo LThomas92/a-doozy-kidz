@@ -30,16 +30,23 @@
 
 	<div class="site-header__newsletter-container">
 	<div class="site-header__newsletter">
+		<div class="site-header__newsletter-left">
+		<ul class="site-header__social-icons">
+			<?php $email = get_field('email_header', 'option');
+				  $facebook = get_field('facebook_header', 'option');
+				  $instagram = get_field('instagram_header', 'option');
+			?>
+			<li class="site-header__social-icon"><a target="_blank" href="<?php echo $instagram; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/instagram-orange.svg" alt="Instagram Icon"></a></li>
+			<li class="site-header__social-icon"><a target="_blank" href="<?php echo $facebook; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook-orange.svg" alt="Facebook Icon"></a></li>
+			<li class="site-header__social-icon"><a href="mailto:<?php echo $email; ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/email-orange.svg" alt="Email Icon"></a></li>
+		</ul>
 		<p class="site-header__newsletter-text">
 			<?php echo get_field('newsletter_text', 'option'); ?>
 		</p>
+		</div>
     
 		<div class="site-header__newsletter-signup">
       <?php echo get_field('newsletter_form', 'option'); ?>
-      <div class="site-branding__contact">
-      <a class="site-branding__email" href="mailto:itzadoozykidz@gmail.com">itzadoozykidz@gmail.com</a>
-      <a target="_blank" href="https://www.instagram.com/itz_a_doozy_kidz/" class="site-branding__sm">Follow us @itz_a_doozy_kidz</a>
-    </div>
 		</div>
 	</div>
 	</div>

@@ -21,13 +21,13 @@
       width: calc(100vw - calc(16px * 2)); } }
   @media only screen and (max-width: 1024px) {
     .site-header {
-      justify-content: space-between;
-      flex-direction: row; } }
+      justify-content: space-between; } }
   .site-header__logo {
     height: 20rem; }
     @media only screen and (max-width: 1024px) {
       .site-header__logo {
-        height: 8rem; } }
+        height: 8rem;
+        justify-self: center; } }
   .site-header__menu-icon {
     display: none; }
     @media only screen and (max-width: 1024px) {
@@ -62,8 +62,12 @@
     @media only screen and (max-width: 1024px) {
       .site-header__newsletter {
         flex-direction: column; } }
+  .site-header__newsletter-left {
+    display: flex;
+    align-items: center; }
   .site-header__newsletter-text {
-    color: #000; }
+    color: #000;
+    margin-left: 2.5rem; }
     @media only screen and (max-width: 1024px) {
       .site-header__newsletter-text {
         margin-bottom: 1rem; } }
@@ -87,6 +91,10 @@
     @media only screen and (max-width: 1024px) {
       .site-header__art-section-cta {
         display: none; } }
+  .site-header__social-icons {
+    display: flex; }
+  .site-header__social-icon img {
+    height: 2.5rem; }
 
 @media only screen and (max-width: 1024px) {
   .main-navigation {
@@ -100,6 +108,7 @@
   margin-right: 1.2rem; }
   .main-navigation li a {
     color: #fff;
+    font-size: 1rem;
     transition: all 300ms ease-in; }
     .main-navigation li a:hover {
       color: #21BAED; }
@@ -224,6 +233,14 @@
     color: #000;
     display: block;
     margin-bottom: 1rem; }
+  .site-footer__follow-us {
+    font-weight: 500;
+    font-size: 1.5rem; }
+  .site-footer__contact-items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.2rem; }
   .site-footer__contact-item {
     display: block;
     margin-bottom: 1.4rem;
@@ -231,9 +248,7 @@
     .site-footer__contact-item a {
       color: #000; }
     .site-footer__contact-item img {
-      height: 1.2rem;
-      margin-right: 1rem;
-      vertical-align: middle; }
+      height: 3rem; }
   .site-footer__copyright {
     width: calc(100vw - calc(16px * 2));
     max-width: 959px;
@@ -262,7 +277,7 @@
   margin-left: auto !important;
   margin-right: auto !important;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center; }
   @media (min-width: 1440px) {
     .site-info {
@@ -270,10 +285,6 @@
   @media (max-width: 767px) {
     .site-info {
       width: calc(100vw - calc(16px * 2)); } }
-  @media only screen and (max-width: 1024px) {
-    .site-info {
-      flex-direction: column;
-      align-items: flex-start; } }
 
 .c-homepage__header-section {
   width: calc(100vw - calc(16px * 2));
@@ -335,9 +346,6 @@
     .c-homepage__about-section {
       width: calc(100vw - calc(16px * 2)); } }
 
-.c-homepage__about-content {
-  padding-bottom: 2rem; }
-
 .c-homepage__about-title {
   text-align: center;
   margin-bottom: 2rem;
@@ -348,18 +356,17 @@
     .c-homepage__about-title {
       font-size: 2rem; } }
 
-.c-homepage__about-desc {
-  margin-bottom: 4rem; }
-  .c-homepage__about-desc p {
-    text-align: left;
-    margin-bottom: 2rem;
-    color: #000;
-    padding: 0 4rem;
-    letter-spacing: 1.2px;
-    font-size: 1.8rem; }
-    @media only screen and (max-width: 1024px) {
-      .c-homepage__about-desc p {
-        padding: 0; } }
+.c-homepage__about-desc p {
+  text-align: left;
+  margin-bottom: 2rem;
+  color: #000;
+  padding: 0 4rem;
+  letter-spacing: 1.2px;
+  font-size: 1.2rem; }
+  @media only screen and (max-width: 1024px) {
+    .c-homepage__about-desc p {
+      padding: 0;
+      font-size: 1rem; } }
 
 .c-homepage__about-images {
   display: grid;
@@ -710,7 +717,10 @@
   .c-fun-dayz-sessions__content p {
     display: block;
     margin-top: 2rem;
-    font-size: 1.8rem; }
+    font-size: 1.2rem; }
+    @media only screen and (max-width: 1024px) {
+      .c-fun-dayz-sessions__content p {
+        font-size: 1rem; } }
   .c-fun-dayz-sessions__image {
     position: relative;
     overflow: hidden;

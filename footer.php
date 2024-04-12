@@ -24,23 +24,17 @@
 
 		</div>
 
-		<nav class="site-footer__navigation">
-		<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-2',
-					'menu_id'        => 'footer-menu',
-				)
-			);
-			?>
-		</nav>
-
 		<div class="site-footer__contact-section">
 			<?php 
 				$email = get_field('footer_email', 'option');
+				$facebook = get_field('footer_facebook', 'option');
+				$instagram = get_field('footer_instagram', 'option');
 			?>
+			<h4 class="site-footer__follow-us">Follow Us</h4>
 			<ul class="site-footer__contact-items">
-				<li class="site-footer__contact-item"><span><img title="Email Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/mail.svg" alt="Email Icon" /></span><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></li>
+				<li class="site-footer__contact-item"><span><img title="Instagram Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/instagram.svg" alt="Instagram Icon" /></span><a href=""></a></li>
+				<li class="site-footer__contact-item"><span><img title="Facebook Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook.svg" alt="Facebook Icon" /></span><a href=""></a></li>
+				<li class="site-footer__contact-item"><span><img title="Email Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/email.svg" alt="Email Icon" /></span><a href="mailto:<?php echo $email; ?>"></a></li>
 			</ul>
 		</div>
 

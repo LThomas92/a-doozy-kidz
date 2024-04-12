@@ -7,7 +7,6 @@
 <?php $title = get_field('title');
       $content = get_field('content');
       $smallImage = get_field('small_image');
-      $bookingCTA = get_field('booking_cta');
 ?>
 
 <h1 class="c-fun-dayz-sessions__title"><?php echo $title;?></h1>
@@ -38,11 +37,6 @@ endif; ?>
 
 <div class="c-fun-dayz-sessions__content">
       <?php echo $content; ?>
-</div>
-
-
-<div class="c-fun-dayz-sessions__cta-container">
-<a class="c-fun-dayz-sessions__cta" href="<?php echo $bookingCTA['url']; ?>"><?php echo $bookingCTA['title']; ?></a>
 </div>
 
 <div class="c-fun-dayz-sessions__booking-section">

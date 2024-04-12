@@ -55,11 +55,6 @@
         @include container-margins;
     }
 
-    &__about-content {
-        padding-bottom: 2rem;
-    }
-
-
     &__about-title {
         text-align: center;
         margin-bottom: 2rem;
@@ -78,12 +73,12 @@
             color: $black;
             padding: 0 4rem;
             letter-spacing: 1.2px;
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             @media only screen and (max-width: $tablet_max) {
                 padding: 0;
+                font-size: 1rem;
             }
         }
-        margin-bottom: 4rem;
     }
 
     &__about-images {
