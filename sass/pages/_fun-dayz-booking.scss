@@ -60,4 +60,11 @@
   //   display: inline-block;
   //   margin: 0 auto;
   // }
+  &__class-title {
+    font-size: 1.4rem;
+    color: $green;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
 }

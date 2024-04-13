@@ -3,60 +3,6 @@
     "title": "Options: Footer",
     "fields": [
         {
-            "key": "field_65eb3dfdcade3",
-            "label": "Footer Email",
-            "name": "footer_email",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6619459ff012c",
-            "label": "Footer Instagarm",
-            "name": "footer_instagarm",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_661945baf012d",
-            "label": "Footer Facebook",
-            "name": "footer_facebook",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
             "key": "field_65ef161f1c964",
             "label": "Copyright",
             "name": "",
@@ -112,5 +58,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712932299
+    "modified": 1712978917
 }

@@ -39,9 +39,14 @@ endif; ?>
       <?php echo $content; ?>
 </div>
 
-<div class="c-fun-dayz-sessions__booking-section">
-  <?php echo the_content(); ?>
+<?php 
+  $bookingCTA = get_field('booking_cta');
+?>
+
+<div class="c-fun-dayz-sessions__cta-container">
+<a href="<?php echo $bookingCTA['url']; ?>" class="c-fun-dayz-sessions__cta"><?php echo $bookingCTA['title']; ?></a>
 </div>
+
 
 </div>
 

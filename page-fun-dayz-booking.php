@@ -20,9 +20,13 @@
       <?php echo $content; ?>
   </div>
 
+  <h3 class="c-fun-dayz-booking__class-title">Choose your classes</h3>
+
   <div class="c-fun-dayz-booking__booking-section">
     <?php echo the_content(); ?>
   </div>
+
+
 
 
   </div>

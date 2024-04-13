@@ -13,9 +13,6 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<?php 
-				$footerDesc = get_field('footer_description', 'option');
-			?>
 
 		<div class="site-footer__left">
 		<a href="<?php echo site_url(); ?>" class="site-footer__logo">
@@ -25,17 +22,16 @@
 		</div>
 
 		<div class="site-footer__contact-section">
-			<?php 
-				$email = get_field('footer_email', 'option');
-				$facebook = get_field('footer_facebook', 'option');
-				$instagram = get_field('footer_instagram', 'option');
+    <?php $email = get_field('email_header', 'option');
+				  $facebook = get_field('facebook_header', 'option');
+				  $instagram = get_field('instagram_header', 'option');
 			?>
 			<h4 class="site-footer__follow-us">Follow Us</h4>
 			<ul class="site-footer__contact-items">
-				<li class="site-footer__contact-item"><span><img title="Instagram Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/instagram.svg" alt="Instagram Icon" /></span><a href=""></a></li>
-				<li class="site-footer__contact-item"><span><img title="Facebook Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook.svg" alt="Facebook Icon" /></span><a href=""></a></li>
-				<li class="site-footer__contact-item"><span><img title="Email Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/email.svg" alt="Email Icon" /></span><a href="mailto:<?php echo $email; ?>"></a></li>
-			</ul>
+				<li class="site-footer__contact-item"><a target="_blank" href="<?php echo $instagram; ?>"><img title="Instagram Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/instagram.svg" alt="Instagram Icon" /></a></li>
+        <li class="site-footer__contact-item"><a target="_blank" href="<?php echo $facebook; ?>"><img title="Facebook Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook.svg" alt="Facebook Icon" /></a></li>
+        <li class="site-footer__contact-item"><a href="mailto:<?php echo $email; ?>"><img title="Email Icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/email.svg" alt="Email Icon" /></a></li>
+      </ul>
 		</div>
 
 		</div><!-- .site-info -->
