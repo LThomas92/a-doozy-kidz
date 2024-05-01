@@ -3,7 +3,9 @@
 <section class="c-gallery">
 <?php $args = array(
     'post_type' => 'galleries',
-    'posts_per_page' => -1
+    'posts_per_page' => -1,
+    'orderby' => 'publish_date',
+    'order' => 'DESC'
 );
 $the_query = new WP_Query( $args ); ?>
 
@@ -12,7 +14,6 @@ $the_query = new WP_Query( $args ); ?>
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
     <li class="c-gallery__list-name">
         <a href="<?php echo get_the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-        <p class="c-gallery__list-name-desc"><?php echo get_the_content(); ?></p>
     </li>
     <?php endwhile; ?>
     </ul>

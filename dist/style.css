@@ -843,8 +843,10 @@
   .c-gallery__list-name {
     margin-bottom: 1.2rem;
     text-align: center; }
+    .c-gallery__list-name h2 {
+      font-weight: 400; }
     .c-gallery__list-name a {
-      color: #000;
+      color: #fd800a;
       transition: all 300ms ease-in; }
       .c-gallery__list-name a:hover {
         color: #613191; }
