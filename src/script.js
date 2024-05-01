@@ -24,13 +24,13 @@ $( document ).ready(function() {
 
 // Gallery Page
 
-$('.c-gallery__list-image figure').each(function() {
-  // Generate random color in hexadecimal format
-  var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+// $('.c-single-gallery__list-image figure').each(function() {
+//   // Generate random color in hexadecimal format
+//   var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
 
-  // Apply the random color as the border
-  $(this).css('border', '4px solid ' + randomColor);
-});
+//   // Apply the random color as the border
+//   $(this).css('border', '4px solid ' + randomColor);
+// });
 
     if ( jQuery(".gutenberg-styles > *").length &&
     !(window.location.hash != "" && jQuery(window.location.hash).length)

@@ -1,9 +1,9 @@
 {
     "key": "group_65f1c12973c38",
-    "title": "Pages: Gallery",
+    "title": "CPT: Gallery",
     "fields": [
         {
-            "key": "field_65f1c129ba52a",
+            "key": "field_66324aa376226",
             "label": "Images",
             "name": "images",
             "aria-label": "",
@@ -25,7 +25,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_65f1c16a74421",
+                    "key": "field_66324abe76227",
                     "label": "Image",
                     "name": "image",
                     "aria-label": "",
@@ -48,7 +48,7 @@
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "medium",
-                    "parent_repeater": "field_65f1c129ba52a"
+                    "parent_repeater": "field_66324aa376226"
                 }
             ]
         }
@@ -56,9 +56,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "post_type",
                 "operator": "==",
-                "value": "107"
+                "value": "galleries"
             }
         ]
     ],
@@ -71,5 +71,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710342537
+    "modified": 1714574879
 }

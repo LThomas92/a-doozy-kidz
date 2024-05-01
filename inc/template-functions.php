@@ -35,3 +35,50 @@ function a_dooyz_kidz_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'a_dooyz_kidz_pingback_header' );
+
+function custom_post_type() {
+	$labels = array(
+		'name'                => _x( 'Galleries', 'Post Type General Name' ),
+		'singular_name'       => _x( 'Gallery', 'Post Type Singular Name'),
+		'menu_name'           => __( 'Galleries'),
+		'parent_item_colon'   => __( 'Parent Gallery'),
+		'all_items'           => __( 'All Galleries' ),
+		'view_item'           => __( 'View Gallery' ),
+		'add_new_item'        => __( 'Add New Gallery' ),
+		'add_new'             => __( 'Add New' ),
+		'edit_item'           => __( 'Edit Gallery' ),
+		'update_item'         => __( 'Update Gallery' ),
+		'search_items'        => __( 'Search Galleries' ),
+		'not_found'           => __( 'Not Found' ),
+		'not_found_in_trash'  => __( 'Not found in Trash' ),
+	);
+
+// Set other options for Custom Post Type
+
+	$args = array(
+		'label'               => __( 'gallery'),
+		'description'         => __( 'gallery'),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		'taxonomies'          => array( 'category', 'post_tag' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_icon'           => 'dashicons-format-gallery',
+		'menu_position'       => 5,
+		'can_export'          => true,
+		'has_archive'         => false,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+		'show_in_rest' => true,
+
+	);
+
+	// Registering your Custom Post Type
+	register_post_type( 'galleries', $args );
+}
+add_action( 'init', 'custom_post_type', 0 );

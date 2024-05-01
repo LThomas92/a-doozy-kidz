@@ -1,28 +1,26 @@
 <?php get_header(); ?>
 
 <section class="c-gallery">
-    <?php if( have_rows('images') ): ?>
+<?php $args = array(
+    'post_type' => 'galleries',
+    'posts_per_page' => -1
+);
+$the_query = new WP_Query( $args ); ?>
 
-    <ul class="c-gallery__list">
-    <?php while( have_rows('images') ) : the_row(); ?>
-
-       <?php $image = get_sub_field('image'); ?>
-
-       <li class="c-gallery__list-image">
-            <figure class="c-gallery__image">
-                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-            </figure>
-            <p class="c-gallery__image-caption"><?php echo $image['caption']; ?></p>
-       </li>
-        
- <?php 
-    endwhile; ?>
+<?php if ( $the_query->have_posts() ) : ?>
+    <ul class="c-gallery__list-names">
+    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    <li class="c-gallery__list-name">
+        <a href="<?php echo get_the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+        <p class="c-gallery__list-name-desc"><?php echo get_the_content(); ?></p>
+    </li>
+    <?php endwhile; ?>
     </ul>
 
-<?php 
-else :
-endif; 
-?>
+    <?php wp_reset_postdata(); ?>
+
+<?php endif; ?>
+
 </section>
 
 <?php get_footer(); ?>
