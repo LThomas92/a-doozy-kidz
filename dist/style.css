@@ -906,7 +906,7 @@
         margin-bottom: 3rem; } }
   .c-single-gallery__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1.2rem; }
     @media only screen and (max-width: 1024px) {
       .c-single-gallery__list {
@@ -925,7 +925,7 @@
         display: block;
         width: 100%;
         height: 0;
-        padding-bottom: 100%; }
+        padding-bottom: 140%; }
       .c-single-gallery__list-image figure img {
         width: 100%;
         height: 100%;
