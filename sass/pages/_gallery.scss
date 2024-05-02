@@ -1,7 +1,14 @@
 .c-gallery {
     @include container-margins;
-    padding-top: 5rem;
+    padding-top: 2.5rem;
     padding-bottom: 3.5rem;
+    &__title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: $orange;
+      margin-bottom: 3rem;
+    }
     &__list-names {
         margin: 0 auto;
     }

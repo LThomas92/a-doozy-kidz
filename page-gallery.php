@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 <section class="c-gallery">
+  <h1 class="c-gallery__title"><?php the_title(); ?></h1>
+
 <?php $args = array(
     'post_type' => 'galleries',
     'posts_per_page' => -1,
