@@ -888,6 +888,35 @@
     margin: 0 auto;
     margin-bottom: 4rem; }
 
+.c-celebrations {
+  width: calc(100vw - calc(16px * 2));
+  max-width: 959px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+  @media (min-width: 1440px) {
+    .c-celebrations {
+      max-width: 1200px; } }
+  @media (max-width: 767px) {
+    .c-celebrations {
+      width: calc(100vw - calc(16px * 2)); } }
+  .c-celebrations__title {
+    text-align: center;
+    color: #fd800a;
+    font-weight: 500;
+    font-size: 3rem;
+    display: block;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem; }
+  .c-celebrations__content p {
+    display: block;
+    margin-bottom: 1.5rem; }
+    .c-celebrations__content p a {
+      color: #fd800a; }
+  .c-celebrations__content h2 {
+    text-decoration: underline;
+    font-weight: 500;
+    margin-bottom: 1rem; }
+
 .c-single-gallery {
   width: calc(100vw - calc(16px * 2));
   max-width: 959px;
