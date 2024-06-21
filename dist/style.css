@@ -872,8 +872,8 @@
   .c-contact-us .gform_title {
     color: #fd800a;
     text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
     font-size: 3rem;
     font-weight: 500; }
   .c-contact-us .gfield_label, .c-contact-us input[type="text"], .c-contact-us input[type="email"], .c-contact-us input[type="tel"], .c-contact-us textarea {
@@ -887,6 +887,9 @@
     width: 75%;
     margin: 0 auto;
     margin-bottom: 4rem; }
+  .c-contact-us .gform_description {
+    text-align: center;
+    margin-bottom: 2.5rem; }
 
 .c-celebrations {
   width: calc(100vw - calc(16px * 2));
