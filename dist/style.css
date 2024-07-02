@@ -920,6 +920,31 @@
     font-weight: 500;
     margin-bottom: 1rem; }
 
+.c-party-space-rental {
+  width: calc(100vw - calc(16px * 2));
+  max-width: 959px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+  @media (min-width: 1440px) {
+    .c-party-space-rental {
+      max-width: 1200px; } }
+  @media (max-width: 767px) {
+    .c-party-space-rental {
+      width: calc(100vw - calc(16px * 2)); } }
+  .c-party-space-rental h2 {
+    color: #fd800a;
+    font-weight: 500;
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center; }
+  .c-party-space-rental p {
+    margin-bottom: 1.5rem; }
+  .c-party-space-rental a {
+    color: #fd800a;
+    font-weight: 600;
+    margin-bottom: 2rem; }
+
 .c-single-gallery {
   width: calc(100vw - calc(16px * 2));
   max-width: 959px;
