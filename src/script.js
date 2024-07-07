@@ -7,31 +7,18 @@ let blockTriggerHeight = $(window).height() * 0.33;
 
 
 $( document ).ready(function() {
-
   //Mobile Menu
-
   $('.site-header__menu-icon').click(function() {
+    console.log('Menu icon clicked');
     $(this).toggleClass('open');
     $('.mobile-menu-overlay').toggleClass('mobile-menu-overlay__active');
-  });
+});
 
-  $('.mobile-menu-overlay__close-icon').click(function() {
+$('.mobile-menu-overlay__close-icon').click(function() {
+    console.log('Close icon clicked');
     $('.mobile-menu-overlay').removeClass('mobile-menu-overlay__active');
-  });
+});
   
-
-
-
-// Gallery Page
-
-// $('.c-single-gallery__list-image figure').each(function() {
-//   // Generate random color in hexadecimal format
-//   var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-
-//   // Apply the random color as the border
-//   $(this).css('border', '4px solid ' + randomColor);
-// });
-
     if ( jQuery(".gutenberg-styles > *").length &&
     !(window.location.hash != "" && jQuery(window.location.hash).length)
   ) {

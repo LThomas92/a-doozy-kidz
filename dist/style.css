@@ -910,6 +910,14 @@
     display: block;
     margin-top: 2.5rem;
     margin-bottom: 2rem; }
+  .c-celebrations .wp-block-image img {
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.2rem;
+    display: block; }
+    @media only screen and (max-width: 1024px) {
+      .c-celebrations .wp-block-image img {
+        max-width: 100%; } }
   .c-celebrations__content p {
     display: block;
     margin-bottom: 1.5rem; }
