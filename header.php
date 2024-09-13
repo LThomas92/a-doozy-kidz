@@ -53,12 +53,6 @@
 	<div class="site-header__container">
 	<header id="masthead" class="site-header">
 
-  <?php 
-		$funDayzCTA = get_field('cta_link', 'option');
-	?>
-
-	<a href="<?php echo $funDayzCTA['url']; ?>" class="site-header__art-section-cta"><?php echo $funDayzCTA['title']; ?></a>
-
 	<div class="site-branding">
   <a href="<?php echo site_url(); ?>">
 			<img title="A Doozy Kidz Logo" class="site-header__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="A Doozy Kidz Logo"/>
