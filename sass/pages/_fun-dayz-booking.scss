@@ -46,6 +46,9 @@
       display: block;
       margin-bottom: 1.2rem;
       font-size: 2rem;
+      @media only screen and (max-width: $tablet_max) {
+        font-size: 1.2rem;
+    }
     }
   }
   // &__cta-section {

@@ -818,6 +818,9 @@
       display: block;
       margin-bottom: 1.2rem;
       font-size: 2rem; }
+      @media only screen and (max-width: 1024px) {
+        .c-fun-dayz-booking__content p {
+          font-size: 1.2rem; } }
   .c-fun-dayz-booking__class-title {
     font-size: 1.4rem;
     color: #299040;
