@@ -7,6 +7,13 @@ let blockTriggerHeight = $(window).height() * 0.33;
 
 
 $( document ).ready(function() {
+  // $('.sub-menu').wrap('<div class="sub-menu-wrapper"></div>');
+
+  $('.menu-item-has-children').click(function(){
+    $('.sub-menu').toggleClass('sub-menu__active');
+    $(this).toggleClass('expanded');
+  });
+
   //Mobile Menu
   $('.site-header__menu-icon').click(function() {
     console.log('Menu icon clicked');
@@ -89,5 +96,5 @@ $('.mobile-menu-overlay__close-icon').click(function() {
       }
     });
   }
-    
+
 });

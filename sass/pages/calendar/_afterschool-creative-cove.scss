@@ -1,0 +1,16 @@
+.c-afterschool-creative-cove {
+    @include container-margins;
+    &__title {
+        color: $blue;
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-align: center;
+        margin: 4rem 0;
+        @media only screen and (max-width: $tablet_max) {
+            font-size: 2rem;
+        }
+    }
+    &__main-content {
+        margin: 2.5rem;
+    }
+}
