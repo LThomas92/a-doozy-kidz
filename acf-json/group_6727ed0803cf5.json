@@ -1,9 +1,9 @@
 {
-    "key": "group_67068a5d3e69e",
-    "title": "Pages: Saturday Hangouts Calendar",
+    "key": "group_6727ed0803cf5",
+    "title": "Pages: Saturday Hangouts",
     "fields": [
         {
-            "key": "field_67068a7a22f68",
+            "key": "field_6727ed08053e3",
             "label": "Title",
             "name": "title",
             "aria-label": "",
@@ -18,17 +18,16 @@
             },
             "default_value": "",
             "maxlength": "",
-            "allow_in_bindings": 0,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_67068a5db8c17",
-            "label": "Weekly Calendar PDF",
-            "name": "weekly_calendar_pdf",
+            "key": "field_6727ed37bf7bd",
+            "label": "Image",
+            "name": "image",
             "aria-label": "",
-            "type": "file",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -39,10 +38,34 @@
             },
             "return_format": "array",
             "library": "all",
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "allow_in_bindings": 0
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6727eff176532",
+            "label": "Content",
+            "name": "content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -50,7 +73,7 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "8"
+                "value": "234"
             }
         ]
     ],
@@ -63,5 +86,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730669824
+    "modified": 1730670584
 }

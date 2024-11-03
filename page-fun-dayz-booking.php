@@ -9,7 +9,6 @@
     <?php 
       $image = get_field('image');
       $content = get_field('content');
-      $bookingCTA = get_field('booking_cta');
     ?>
 
   <figure class="c-fun-dayz-booking__image">
@@ -19,14 +18,6 @@
   <div class="c-fun-dayz-booking__content">
       <?php echo $content; ?>
   </div>
-
-  <h3 class="c-fun-dayz-booking__class-title">Choose your classes</h3>
-
-  <div class="c-fun-dayz-booking__booking-section">
-    <?php echo the_content(); ?>
-  </div>
-
-
 
 
   </div>

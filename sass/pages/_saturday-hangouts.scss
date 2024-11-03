@@ -1,0 +1,47 @@
+.c-saturday-hangouts-content {
+  @include container-margins;
+  padding-bottom: 2.5rem;
+  &__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    color: $orange;
+  }
+  &__image {
+    position: relative;
+        overflow: hidden;
+        box-shadow: $box-shadow-light-black;
+        margin-top: 2.5rem;
+        &::before {
+            content: "";
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 60%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            transition: .3s cubic-bezier(.64,.04,.35,1);
+            &:hover {
+                transform: scale(1.05);
+              }
+        }
+  }
+  &__main {
+    p {
+      display: block;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      @media only screen and (max-width: $tablet_max) {
+        font-size: 1rem;
+      }
+  }
+  }
+}
