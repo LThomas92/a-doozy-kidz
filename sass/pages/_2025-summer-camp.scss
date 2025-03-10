@@ -1,0 +1,30 @@
+.c-2025-summer-camp {
+    @include container-margins;
+    h2 {
+        text-align: center;
+        font-weight: 300;
+        font-size: 2.5rem;
+        font-family: $fredoka;
+        color: $orange;
+        display: block;
+        margin: 2rem 0;
+    }
+    .wp-block-image {
+        margin-bottom: 4rem;
+    }
+    p {
+        display: block;
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        @media only screen and (max-width: $tablet_max) {
+          font-size: 1rem;
+    }
+}
+&__main-content {
+    margin-bottom: 5rem;
+}
+}
+
+.wp-block-amelia-events-list-booking-gutenberg-block {
+    margin-top: 3.5rem;
+}

@@ -1,0 +1,19 @@
+.c-daily-schedule {
+    @include container-margins;
+    .wp-block-image {
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    p {
+        display: block;
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        @media only screen and (max-width: $tablet_max) {
+          font-size: 1rem;
+    }
+}
+&__main-content {
+    margin-bottom: 5rem;
+}
+}
