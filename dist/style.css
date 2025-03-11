@@ -1108,6 +1108,14 @@
   @media (max-width: 767px) {
     .c-daily-schedule {
       width: calc(100vw - calc(16px * 2)); } }
+  .c-daily-schedule__title {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2.5rem;
+    font-family: "Fredoka", system-ui;
+    color: #fd800a;
+    display: block;
+    margin: 2rem 0; }
   .c-daily-schedule .wp-block-image {
     margin-top: 2.5rem;
     margin-bottom: 2rem;
@@ -1133,6 +1141,14 @@
   @media (max-width: 767px) {
     .c-weekly-themes {
       width: calc(100vw - calc(16px * 2)); } }
+  .c-weekly-themes__title {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2.5rem;
+    font-family: "Fredoka", system-ui;
+    color: #fd800a;
+    display: block;
+    margin: 2rem 0; }
   .c-weekly-themes .wp-block-image {
     margin-top: 2.5rem;
     margin-bottom: 2rem;

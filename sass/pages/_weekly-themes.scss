@@ -1,5 +1,14 @@
 .c-weekly-themes {
     @include container-margins;
+    &__title {
+      text-align: center;
+      font-weight: 300;
+      font-size: 2.5rem;
+      font-family: $fredoka;
+      color: $orange;
+      display: block;
+      margin: 2rem 0;
+    }
     .wp-block-image {
         margin-top: 2.5rem;
         margin-bottom: 2rem;
